@@ -8,17 +8,29 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Role implements Serializable{
 	@Id
 	private String id;
-	private String roleName;
+	private ERole name;
+
+	public Role() {
+
+	}
+
+	public Role(ERole name) {
+		this.name = name;
+	}	
+	
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getRoleName() {
-		return roleName;
+	
+	public ERole getName() {
+		return name;
 	}
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
+	
+	public void setName(ERole name) {
+		this.name = name;
 	}
 }
